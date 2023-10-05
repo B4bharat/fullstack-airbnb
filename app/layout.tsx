@@ -14,6 +14,7 @@ import getCurrentUser from "./actions/getCurrentUser";
 
 // ---------- Styles --------------
 import "./globals.css";
+import RentModal from "./components/modals/RentModal";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default async function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           <ToasterProvider />
+          <RentModal />
           <LoginModal />
           <RegisterModal />
           <Navbar currentUser={currentUser} />
